@@ -1,0 +1,30 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+
+# Test / tool caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Generated sample artifacts (regenerate with scripts/gen_fake.py and the CLI)
+data/*.json
+data/*.html
+data/*.masked*
+*.masked.txt
+
+# Editor / OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
