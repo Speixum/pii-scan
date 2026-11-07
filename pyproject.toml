@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pii-scan"
+version = "1.0.0"
+description = "Zero-dependency PII scanner and masking tool (CN ID card, bank card, mobile, email, USCC, IPv4)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "pii-scan contributors" }]
+keywords = ["pii", "privacy", "masking", "data-governance", "dataset", "compliance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Text Processing",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.scripts]
+piiscan = "piiscan.cli:main"
+
+[tool.setuptools]
+packages = ["piiscan"]
+
+[tool.setuptools.package-data]
+piiscan = ["rules/*.json"]

@@ -1,0 +1,34 @@
+{
+  "schema": "pii-rules/1.0",
+  "name": "demo-custom",
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "employee_id",
+      "type": "employee_id",
+      "regex": "(?<![A-Za-z0-9-])EMP-[0-9]{6}(?![A-Za-z0-9-])",
+      "validators": [],
+      "context_keywords": [
+        "员工编号",
+        "工号",
+        "employee"
+      ],
+      "weight": 0.6,
+      "level": "sensitive",
+      "preview": "head3_tail4"
+    },
+    {
+      "name": "internal_ticket",
+      "type": "ticket_no",
+      "regex": "(?<![A-Za-z0-9-])TICKET-[0-9]{4}-[0-9]{4}(?![A-Za-z0-9-])",
+      "validators": [],
+      "context_keywords": [
+        "工单",
+        "ticket"
+      ],
+      "weight": 0.5,
+      "level": "general",
+      "preview": "head1_tail1"
+    }
+  ]
+}
